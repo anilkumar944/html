@@ -1,0 +1,95 @@
+.body {
+    background-color: rgb(231, 235, 243);
+    margin: 0px 300px 0px 300px;
+}
+
+.box {
+    border: 1px solid black;
+}
+
+.player-name {
+    text-decoration: darkblue;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.inner-box {
+    background-color: rgb(206, 167, 38);
+    height: 200px;
+}
+
+.player-top {
+    margin: 0px 50px 50px 50px;
+}
+
+.player-bottom {
+    margin: 50px 50px 0px 50px;
+}
+
+.player1 {
+    border: 1px solid black;
+    background-color: green;
+}
+
+.player2 {
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+.player3 {
+    border: 1px solid black;
+    background-color: blue;
+}
+
+.player4 {
+    border: 1px solid black;
+    background-color: red;
+}
+
+.dana {
+    height: 50px;
+    width: 50px;
+}
+
+.dana1 {
+    background-color: green;
+    border: 1px solid rgb(1, 66, 1);
+}
+
+.dana2 {
+    background-color: yellow;
+    border: 1px solid rgb(126, 126, 0);
+}
+
+.dana3 {
+    background-color: blue;
+    border: 1px solid rgb(4, 4, 124);
+}
+
+.dana4 {
+    background-color: red;
+    border: 1px solid rgb(161, 3, 3);
+}
+
+.dana-left {
+    float: left;
+    margin: 25px 20px 25px 80px;
+}
+
+.dana-right {
+    float: right;
+    margin: 25px 80px 25px 19px;
+}
+
+.danarun {
+    border: 1px solid rgb(3, 0, 0);
+    height: 50px;
+}
+
+.danaplace {
+    padding-top: 15px;
+    text-align: center;
+}
