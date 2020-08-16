@@ -1,0 +1,23 @@
+.container1 {
+    border: 1px solid black;
+    width: 575px;
+    height: 300px;
+}
+
+.row1 {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.lol {
+    border: 1px solid black;
+    width: 190.3px;
+    height: 48px;
+    text-align: center;
+    padding: 15px;
+}
+
+.text1 {
+    text-align: center;
+    padding: 15px;
+}
