@@ -90,7 +90,7 @@
     margin: 25px 25px 0px 20px;
 }
 .danarun:hover {
-    background-color: #d6d6d6;
+    background-color: hsl(0, 0%, 84%);
     cursor: pointer;
 }
 .danarun {
@@ -104,6 +104,11 @@
 }
 .star {
     padding: 0;
+}
+.s1{
+    background-image: url(s1.png);
+    background-size: cover;
+    background-position: center;
 }
 .P-0{
     padding-top: 15px;
