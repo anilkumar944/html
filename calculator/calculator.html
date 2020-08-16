@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+
+
+    <h1>Calculator</h1>
+    <label for="fnumber"> enter first number:</label>
+   <input type="number" id="x"><br><br>
+   <label for="lnumber"> enter another number:</label>
+   <input type="number" id="y"><br><br>
+   <input type ="submit" value="+" onclick="add()" />
+   <input type ="submit" value="-" onclick="substraction()"/ >
+   <input type ="submit" value="*" onclick="multiplication()"/ >
+   <input type ="submit" value="/" onclick="divison()"/ >
+   <p id="result"></p>
+   <script>
+    function add(){
+        var a = document.getElementById("x").value;
+        var b = document.getElementById("y").value;
+        if (a=== "" ){
+           alert("please enter first number.")
+        return false;
+        }
+        if (b=== "" ){
+           alert("please enter another number.")
+        return false;
+        }
+
+        var r = parseInt(a)+ parseInt(b);
+       document.getElementById("result").innerHTML=r;
+    }
+    function substraction(){
+     var a = document.getElementById("x").value;
+     var b = document.getElementById("y").value;
+     if (a=== "" ){
+           alert("please enter first number.")
+        return false;
+        }
+        if (b=== "" ){
+           alert("please enter another number.")
+        return false;
+        }
+     var r = parseInt(a)- parseInt(b);
+     document.getElementById("result").innerHTML=r;
+    }
+    function multiplication(){
+     var a = document.getElementById("x").value;
+     var b = document.getElementById("y").value;
+     if (a=== "" ){
+           alert("please enter first number.")
+        return false;
+        }
+        if (b=== "" ){
+           alert("please enter another number.")
+        return false;
+        }
+
+
+
+     var r = parseInt(a)* parseInt(b);
+     document.getElementById("result").innerHTML=r;
+    }
+    function divison(){
+     var a = document.getElementById("x").value;
+     var b = document.getElementById("y").value;
+     if (a=== "" ){
+           alert("please enter first number.")
+        return false;
+        }
+        if (b=== "" ){
+           alert("please enter another number.")
+        return false;
+        }
+
+     var r = parseInt(a) / parseInt(b);
+     document.getElementById("result").innerHTML=r;
+    }
+   </script>
+ 
+
+</body>
+</html>
