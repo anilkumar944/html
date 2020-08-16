@@ -13,77 +13,82 @@
 </head>
 
 <body>
-    <h1>
-        <u>MARK LIST</u>
-    </h1>
+  
 
-    <div class="container container1 ">
+    <div class="container ">
+        <div class = "result">   
+            <h1>FINAL RESULT</h1>
 
-        <div class="row row1">
-            <div class="col-sm-4 lol">SUBJECT</div>
-            <div class="col-sm-4 lol">F mark</div>
-            <div class="col-sm-4 lol">S mark</div>
         </div>
-        <div class="row row1">
-            <div class="col-sm-4 lol">PHYSICS</div>
-            <div class="col-sm-4 lol">100</div>
-            <div class="col-sm-4 lol">
+        <div class="row ">
+            <div class="col-sm-4" > SUBJECT </div>
+            <div class="col-sm-4" >F mark </div>
+            <div class="col-sm-4 ">S mark</div>
+        </div>
+        <div class="row ">
+            <div class="col-sm-4" >PHYSICS</div>
+            <div class="col-sm-4" >100</div>
+            <div class="col-sm-4" >
                 <input type="number" id="p" onkeyup="addMark()">
 
 
             </div>
 
         </div>
-        <div class="row row1">
-            <div class="col-sm-4 lol">CHEMISTRY</div>
-            <div class="col-sm-4 lol">100</div>
-            <div class="col-sm-4 lol">
+        <div class="row ">
+            <div class="col-sm-4" >CHEMISTRY</div>
+            <div class="col-sm-4" >100</div>
+            <div class="col-sm-4" >
                 <input type="number" id="c" onkeyup="addMark()"><br><br>
 
 
             </div>
         </div>
-        <div class="row row1">
-            <div class="col-sm-4 lol">MATH</div>
-            <div class="col-sm-4 lol">100</div>
-            <div class="col-sm-4 lol">
+        <div class="row ">
+            <div class="col-sm-4 ">MATH</div>
+            <div class="col-sm-4 ">100</div>
+            <div class="col-sm-4 ">
                 <input type="number" id="m" onkeyup="addMark()"><br><br>
 
             </div>
         </div>
-        <div class="row row1">
-            <div class="col-sm-4 lol">ENGLISH</div>
-            <div class="col-sm-4 lol">100</div>
-            <div class="col-sm-4 lol">
+        <div class="row ">
+            <div class="col-sm-4 ">ENGLISH</div>
+            <div class="col-sm-4 ">100</div>
+            <div class="col-sm-4 ">
                 <input type="number" id="e" onkeyup="addMark()"><br><br>
 
 
             </div>
         </div>
-        <div class="row row1">
-            <div class="col-sm-4 lol">IT</div>
-            <div class="col-sm-4 lol">100</div>
-            <div class="col-sm-4 lol">
+        <div class="row ">
+            <div class="col-sm-4 ">IT</div>
+            <div class="col-sm-4 ">100</div>
+            <div class="col-sm-4 ">
                 <input type="number" id="i" onkeyup="addMark()"><br><br>
 
 
             </div>
         </div>
         <div class="row row1">
-            <div class="col-sm-8 text1 ">Total</div>
-            <div class="col-sm-4 lol">
+            <div class="col-sm-6 text1 ">Total</div>
+            <div class="col-sm-3 ">
+                500
+
+            </div>
+            <div class="col-sm-3 ">
                 <p id="tot"></p>
             </div>
         </div>
         <div class="row row1">
             <div class="col-sm-8 text1 ">PERCENTAGE</div>
-            <div class="col-sm-4 lol">
+            <div class="col-sm-4 ">
                 <p id="per"></p>
             </div>
         </div>
         <div class="row row1">
             <div class="col-sm-8 text1 ">GRADE</div>
-            <div class="col-sm-4 lol">
+            <div class="col-sm-4 ">
                 <p id="gra"></p>
             </div>
         </div>
@@ -91,13 +96,28 @@
     <script>
         function addMark() {
             var a = document.getElementById("p").value;
+            if (a>100){
+            alert(".")
+           
+            }
             var b = document.getElementById("c").value;
             var c = document.getElementById("m").value;
             var d = document.getElementById("e").value;
             var e = document.getElementById("i").value;
             var to = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e);
             document.getElementById("tot").innerHTML = to;
+
+            document.getElementById("per").innerHTML = percent(to , 500)
         }
+
+        function percent(x,y){
+            
+            var result = Math.floor (parseInt(x)/parseInt(y))*100;
+             return result;
+            
+        }
+
+
     </script>
 </body>
 
