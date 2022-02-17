@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container mt-3">
+        <div class="mb-3 mt-3">
+            <input type="text" onkeyup="printPattern()" class="form-control" name="Number" id="number" value="5" placeholder="Enter Number">
+
+        </div>
+
+
+        <div class="container mt-3">
+            <h2>DS Sort form</h2>
+            <div class="form-group">
+                <label for="sel1">Select list (select one):</label>
+                <select class="form-control" id="letter" onchange="printPattern()">
+              <option value="i">I</option>
+              <option>E</option>
+              <option>H</option>
+              <option>Z</option>
+              <option>X</option>
+              <option>Y</option>
+            </select>
+
+            </div>
+
+
+
+            <p id="result"></p>
+        </div>
+
+        <script>
+            function printPattern() {
+                letter = document.getElementById("letter").value
+
+                var n = document.getElementById("number").value;
+
+                if (n > 50) {
+                    document.getElementById("number").value = "";
+                    document.getElementById("result").innerHTML = "value exceed 50";
+
+                    return;
+                }
+
+                //alert("number  choosen - " + n);
+                var res = "";
+                if (letter == "i") {
+                    res = patternI(n);
+                } else if (letter == "E") {
+                    res = patternE(n);
+                } else if (letter == "H") {
+                    res = patternH(n);
+                } else if (letter == "Z") {
+                    res = patternZ(n);
+                } else if (letter == "X") {
+                    res = patternX(n);
+                } else if (letter == "Y") {
+                    res = patternY(n);
+                }
+
+
+                document.getElementById("result").innerHTML = res;
+            }
+
+            function patternI(n) {
+                var output = "";
+                for (i = 0; i < n; i++) {
+                    for (j = 0; j < n; j++) {
+                        if (j == 0) {
+                            output += "*";
+                        }
+                    }
+                    output += "<br>";
+                }
+                return output;
+            }
+
+            function patternE(n) {
+                var output = "";
+                for (i = 0; i < n; i++) {
+                    for (j = 0; j < n; j++) {
+                        if (j == 0 || i == 0 || i == n - 1 || i == Math.floor((n - 1) / 2)) {
+                            output += ("* &nbsp; &nbsp;");
+                        }
+                    }
+                    output += "<br>";
+                }
+                return output;
+
+            }
+
+            function patternH(n) {
+                var output = "";
+                for (i = 0; i < n; i++) {
+                    for (j = 0; j < n; j++) {
+                        if (j == 0 || i == Math.floor((n - 1) / 2) || j == n - 1) {
+                            output += ("*&nbsp;&nbsp;");
+                        } else {
+                            output += ("&nbsp;&nbsp;&nbsp;");
+                        }
+                    }
+                    output += "<br>";
+                }
+                return output;
+
+            }
+
+            function patternZ(n) {
+                var output = "";
+                for (i = 0; i < n; i++) {
+                    for (j = 0; j < n; j++) {
+                        if (i == 0 || j == (n - 1) - i || i == n - 1) {
+                            output += ("*&nbsp;");
+                        }
+                    }
+                    output += "<br>";
+                }
+                return output;
+            }
+
+            function patternX(n) {
+                var output = "";
+                for (i = 0; i < n; i++) {
+                    for (j = 0; j < n; j++) {
+                        if (j == (n - 1) - i || i == j) {
+                            output += "* &nbsp;&nbsp;";
+                        } else {
+                            output += "&nbsp;&nbsp;&nbsp;"
+                        }
+                    }
+                    output += "<br>";
+                }
+                return output;
+            }
+
+            function patternY(n) {
+                var output = "";
+                for (i = 0; i < n; i++) {
+                    for (j = 0; j < n; j++) {
+                        if (j == (n - 1) - i || i == j) {
+                            output += "* &nbsp;&nbsp;";
+                        } else {
+                            output += "&nbsp;&nbsp;&nbsp;"
+                        }
+                    }
+                    output += "<br>";
+                }
+                return output;
+            }
+        </script>
+
+
+</body>
+
+</html>

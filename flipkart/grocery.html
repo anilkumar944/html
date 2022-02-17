@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grocery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script type="text/javascript" src="grocery.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container-x">
+        <div class="header">
+            <div class="logo">
+                <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="flipkartlogo">
+            </div>
+
+            <div class="menu">
+                <a href="#">Menu</a>
+                <a href="#">Chotu</a>
+                <a href="#">Mantu</a>
+            </div>
+            <div class="search-container">
+
+                <form>
+                    <div class="searchbox">
+                        <input type="text" id="data" placeholder="Search grocery.." name="search">
+                        <button type="button" onclick="find()" class="search_button">
+                            <i class="fa fa-search"></i>
+
+                        </button>
+
+                    </div>
+            </div>
+
+            <div>
+                <button class="button" type="button">Login</button>
+            </div>
+        </div>
+
+
+        <div class="container-fluid mt-3">
+
+            <div class="row " id="grocery"> </div>
+
+        </div>
+
+
+
+</body>
+
+<script>
+    displayGrocery(groceryList);
+
+    function displayGrocery(arr) {
+        var result = "";
+        for (i = 0; i < arr.length; i++) {
+            result += '<div class="col-sm-2 p-3 text-center">';
+
+            result += '<img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100">';
+            result += "<p>" + arr[i].title + "</p>";
+
+            result += "<p>" + arr[i].price + "</p>";
+            result += "<p>" + arr[i].rating + "</p>";
+            result += "</div>";
+        }
+
+
+        document.getElementById("grocery").innerHTML = result;
+
+    }
+</script>
+
+
+</html>
